@@ -1,0 +1,3 @@
+Recherche simple et mutlicriteres
+Affichage details d'un produit et quantite en stock
+Ajout d'un produit dans le panier virtuelle(avec ou sans login)

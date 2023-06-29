@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use \App\Http\Controllers\CommissionController;
+use \App\Http\Controllers\AdminController;
+use \App\Http\Controllers\EmployeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +17,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', \App\Http\Controllers\ArticleController::class . '@index')->name('index');
+Route::get('/',AdminController::class . '@index')->name('index');
+
+Route::get('/admin',AdminController::class . '@index')->name('index');
+
+Route::get('/accueil-admin',AdminController::class . '@accadmin')->name('accueil-admin');
+
+Route::get('/accueil-employe',EmployeController::class . '@accemploye')->name('accueil-employe');
+
+Route::get('/employe',EmployeController::class . '@index')->name('index');
+
+
 
 // Fonction get generalisee
 Route::get('/{controller}/{method}/{param?}', function ($controller, $method, $param = null) {
@@ -31,3 +45,4 @@ Route::post('/{controller}/{method}', function ($controller, $method, Request $r
     $controller = app()->make("App\\Http\\Controllers\\{$controller}Controller");
     return $controller->$method($request);
 });
+
