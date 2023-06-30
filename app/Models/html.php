@@ -137,13 +137,13 @@ class html extends Model
 
         // Générer le tableau HTML
         // Générer le tableau HTML
-        $html = '<div class="col-lg-12">';
-        $html .= '<div class="col-md-12">';
-        $html .= '<div class="card">';
-        $html .= '<div class="card-body">';
-        $html .= '<h5 class="card-title">Liste</h5>';
 
-        $html .= '<table class="table">';
+        $html = '<div class="col-12">';
+        $html .= ' <div class="card recent-sales overflow-auto">';
+        $html .= '<div class="card-body">';
+        $html .= '<h5 class="card-title">Recent Sales <span>| Today</span></h5>';
+
+        $html .= '<table class="table table-borderless datatable">';
         $html .= '<thead>';
         $html .= '<tr>';
 

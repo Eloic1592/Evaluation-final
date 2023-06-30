@@ -11,7 +11,10 @@
     <meta content="width=50%, initial-scale=1" name="viewport">
     <meta content="index,follow" name="robots">
 
+    @include('css.css')
+
 </head>
+
 
 <body>
 
