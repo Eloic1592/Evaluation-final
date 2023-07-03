@@ -15,7 +15,7 @@ class html extends Model
     public function list($model,$tabfunction=null,$page=10)
     {
         // Récupérer les enregistrements paginés du modèle
-        $records =$model->simplePaginate($page);
+        $records =$model->all();
 
 
         // Vérifier s'il y a des enregistrements
@@ -64,7 +64,6 @@ class html extends Model
         $html .= '</table>';
         // $html .= '</div>';
         $html .= '</div>';
-        $html .= $records->links();
         $html .= '</div>';
         $html .= '</div>';
         return $html;
@@ -136,14 +135,12 @@ class html extends Model
         }
 
         // Générer le tableau HTML
-        // Générer le tableau HTML
 
         $html = '<div class="col-12">';
-        $html .= ' <div class="card recent-sales overflow-auto">';
+        $html .= '<div class="card recent-sales overflow-auto">';
         $html .= '<div class="card-body">';
-        $html .= '<h5 class="card-title">Recent Sales <span>| Today</span></h5>';
-
-        $html .= '<table class="table table-borderless datatable">';
+        $html .= '<h5 class="card-title">Liste</h5>';
+        $html .= '<table class="table datatable">';
         $html .= '<thead>';
         $html .= '<tr>';
 
@@ -179,8 +176,6 @@ class html extends Model
         $html .= '</tbody>';
         $html .= '</table>';
         $html .= '</div>';
-        $html .= '</div>';
-        $html .= $filteredRecords->links();
         $html .= '</div>';
         $html .= '</div>';
 

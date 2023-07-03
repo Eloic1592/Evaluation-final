@@ -1,7 +1,7 @@
 {{-- HEADER AND FOOTER +EXTENDS NAVBAR AND CONTENT --}}
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<header>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -10,7 +10,6 @@
     <meta content="intelligence artificielle, big data, apprentissage, reseau, neurones, machine,donnees, langage" name="keywords">
     <meta content="width=50%, initial-scale=1" name="viewport">
     <meta content="index,follow" name="robots">
-
 
 
 </head>
@@ -76,11 +75,11 @@
 
 </header><!-- End Header -->
 
+
 <!-- ======= Sidebar ======= -->
+@include('forme.navbar')
 
-    @extends('forme.navbar')
-
-
+<!-- ======= Body ======= -->
 <main id="main" class="main">
         <div class="row">
             <div class="col-lg-3">
@@ -96,17 +95,9 @@
 
 </main>
 <!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
 
-    <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
 
-    </div>
-</footer><!-- End Footer -->
 
 </body>
-
+@include('css.js')
 </html>

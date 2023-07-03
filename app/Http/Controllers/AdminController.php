@@ -27,7 +27,7 @@ class AdminController extends Controller
     // Deconnexion
     public function deconnexion(){
         session()->forget('admin');
-        return view('admin.index-admin');
+        return view('admin.index');
     }
 
     public function accadmin()
