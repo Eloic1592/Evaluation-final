@@ -1,4 +1,4 @@
-@extends('forme.forme')
+@extends('forme.forme-user')
 @section('title') Liste des evenements @endsection
 @include('css.css')
 
