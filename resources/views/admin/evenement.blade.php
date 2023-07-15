@@ -63,7 +63,7 @@
     <section class="section dashboard">
       <div class="row">
 
-            <div class="col-12">
+            {{-- <div class="col-12">
               <div class="card recent-sales overflow-auto">
 
                 <div class="card-body">
@@ -226,7 +226,8 @@
                     </tbody>
                   </table>
 
-                </div>
+                </div> --}}
+                {!! $liste !!}
 
               </div>
             </div><!-- End Recent Sales -->

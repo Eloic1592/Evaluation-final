@@ -30,10 +30,14 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
+
     public function accadmin()
     {
+        $conditions=[
+            'etat' => 0,
+        ];
         $type_evenement=type_evenement::where('etat',0)->get();
-        $modelTable = html::list(new v_liste_evenement(),['modifier','supprimer']);
+        $modelTable = html::findwhere(new v_liste_evenement,$conditions,['modifier','supprimer']);
             return view('admin.evenement',[
                 'liste'=>$modelTable,
                 'type_evenement'=>$type_evenement

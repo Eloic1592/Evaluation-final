@@ -112,7 +112,7 @@ class html extends Model
     }
 
     // Find where generalisee
-    public function findwhere($model, $conditions,$tabfunction=null,$page = 10)
+        public function findwhere($model, $conditions,$tabfunction=null,$page = 10)
     {
 
 
@@ -127,7 +127,7 @@ class html extends Model
                 $query = $query->where($column, $condition);
             }
         }
-        $filteredRecords = $query->simplePaginate($page);
+        $filteredRecords = $query->get();
 
         // Vérifier s'il y a des enregistrements filtrés
         if ($filteredRecords->isEmpty()) {
@@ -181,6 +181,7 @@ class html extends Model
 
         return $html;
     }
+
 
 
 }
