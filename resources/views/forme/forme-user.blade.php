@@ -11,7 +11,6 @@
     <meta content="width=50%, initial-scale=1" name="viewport">
     <meta content="index,follow" name="robots">
 
-    @include('css.css')
 
 </head>
 
@@ -75,7 +74,7 @@
 
 <!-- ======= Sidebar ======= -->
 
-    @extends('forme.navbar-user')
+    @include('forme.navbar-user')
 
 
 <main id="main" class="main">
@@ -105,5 +104,5 @@
 </footer><!-- End Footer -->
 
 </body>
-
+@include('css.js')
 </html>
