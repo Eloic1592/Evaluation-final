@@ -2,9 +2,6 @@
 @section('title') Liste des evenements @endsection
 @include('css.css')
 
-<body>
-
-
 @section('content')
     <p><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#largeModal"><a style="color:white;">Nouvel evenement</a></button></p>
 
@@ -249,8 +246,6 @@
   <footer id="footer" class="footer">
 
   </footer><!-- End Footer -->
-  {{-- @include('css.js') --}}
 
-</body>
 
 </html>
